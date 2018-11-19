@@ -7,5 +7,5 @@ class RedNeuronal{
 	AgregarCapa(int cNeuronas) ;
 	Categoría clasificar(dato) ;
 	entrenar(datos) ;
-}
+};
 #endif
