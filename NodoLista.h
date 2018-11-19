@@ -1,5 +1,5 @@
-#ifndef NODO_H
-#define NODO_H
+#ifndef NODOLISTA_H
+#define NODOLISTA_H
 #include <iostream>
 template <class T>
 class NodoLista {
