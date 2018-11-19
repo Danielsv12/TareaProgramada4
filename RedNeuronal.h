@@ -3,10 +3,9 @@
 #include "lista.h"
 
 class RedNeuronal{
-	Lista <Capa> ;
+	Lista <Capa*> *capas ;
 	RedNeuronal() ;
 	AgregarCapa(int cNeuronas) ;
-	Categoría clasificar(dato) ;
-	entrenar(datos) ;
+	void entrenar(datos) ;
 };
 #endif
