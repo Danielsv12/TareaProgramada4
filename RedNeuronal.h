@@ -2,7 +2,7 @@
 #define REDNEURONAL_H
 
 class RedNeuronal{
-	lista Capas ;
+	lista <Capa> ;
 	RedNeuronal() ;
 	AgregarCapa(int cNeuronas) ;
 	Categoría clasificar(dato) ;
