@@ -1,3 +1,5 @@
+#ifndef NODOLISTA_H
+#define NODOLISTA_H
 
 class RedNeuronal{
 	lista Capas ;
