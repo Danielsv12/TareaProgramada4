@@ -1,5 +1,6 @@
 #ifndef REDNEURONAL_H
 #define REDNEURONAL_H
+#include "lista.h"
 
 class RedNeuronal{
 	Lista <Capa> ;
