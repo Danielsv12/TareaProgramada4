@@ -8,3 +8,4 @@ class RedNeuronal{
 	Categoría clasificar(dato) ;
 	entrenar(datos) ;
 }
+#endif
