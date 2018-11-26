@@ -18,7 +18,7 @@ public:
         cabeza = n;
         }else{
         while(t!= nullptr){
-        t = t-> getSiguient();
+        t = t-> getSiguiente();
         if(t != nullptr){
          aux = aux->getSiguiente;
         }
