@@ -9,10 +9,25 @@ public:
     Lista<T>(){ cabeza= nullptr ;}
 
     void Insertar(T dato) {
-        NodoLista<T>* n = new NodoLista<T>(dato) ;
-        NodoLista<T>* t= cabeza ;
-        cabeza = n ;
-        cabeza->setSiguiente(t);
+        
+        
+        NodoLista<T>n = new NodoLista<T>(dato) ;
+        NodoLista<T>*t = cabeza ;
+        NodoLista<T>* aux = cabeza;
+        if(t==nullptr){
+        cabeza = n;
+        }else{
+        while(t!= nullptr){
+        t = t-> getSiguient();
+        if(t != nullptr){
+         aux = aux->getSiguiente;
+        }
+            aux->setSiguiente(dato);
+        
+        }
+        
+        }
+        
     }
 
     int Longitud() {
