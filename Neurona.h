@@ -17,6 +17,12 @@ Neurona( float u , float c){}
         siguiente= nullptr;
     }
 
+  float getCarga(){return carga};
+   void setCarga(c1){c=c1};
+  float getUmbral(){return umbral};
+  void  setUmbral(u1){u= u1};
+  
+  
   
 
 
