@@ -22,7 +22,7 @@ public:
         if(t != nullptr){
          aux = aux->getSiguiente;
         }
-            aux->setSiguiente(dato);
+            aux->setSiguiente(n);
         
         }
         
