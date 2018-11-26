@@ -3,8 +3,7 @@
 #include "Neurona.h"
 
 class Conexión {
-	Neurona r ;
 	float peso ;
-	Conexión(neurona, peso)
+	void Conexión(neurona, peso)
 };
 #endif
