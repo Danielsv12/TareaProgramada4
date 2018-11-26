@@ -5,7 +5,7 @@
 
 Lista <Neurona*> *neuronas;
 
-	AgregarNeurona(Neurona) ;
+	void AgregarNeurona(Neurona n) ;
 
 
 
