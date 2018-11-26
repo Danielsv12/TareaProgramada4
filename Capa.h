@@ -3,7 +3,8 @@
 #include "Lista.h"
 #include "Neurona.h"
 
-Lista <Neurona> ;
+Lista <Neurona*> *neuronas;
+
 	AgregarNeurona(Neurona) ;
 
 
