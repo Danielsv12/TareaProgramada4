@@ -4,6 +4,7 @@
 
 class Conexión {
 	float peso ;
-	void Conexión(neurona, peso)
+	void Conexión(neurona n, float peso);
+		void setPeso(float p){peso = p;}
 };
 #endif
