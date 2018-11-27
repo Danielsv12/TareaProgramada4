@@ -6,6 +6,7 @@
 Lista <Neurona*> *neuronas;
 
 	void AgregarNeurona(Neurona n) ;
+        Capa(int neuronas);
 
 
 
