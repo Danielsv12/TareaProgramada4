@@ -1,10 +1,16 @@
+#pragma once
 #ifndef CONEXION_H
 #define CONEXION_H
-#include "Neurona.h"
+#include "neurona.h"
 class Neurona;
-class Conexión {
-	float peso ;
-	void Conexión(neurona n, float peso);
-		void setPeso(float p){peso = p;}
+class Conexion {
+public:
+    Neurona *nr = nullptr;
+    float peso;
+    Conexion( Neurona *n);
+    float GetPeso(){return peso;}
+
+    void SetPeso(float p){peso = p;}
+
 };
 #endif
