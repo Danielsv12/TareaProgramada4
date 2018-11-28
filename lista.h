@@ -50,5 +50,17 @@ public:
         return n!=nullptr?n->getDato():nullptr;
     }
 
+     /*T Buscar(int dato1){
+        
+        NodoLista<T> *n = cabeza;
+        while(n!=nullptr){
+            
+            if(n->getDato()== dato1){
+                return n;
+            }
+           n= n->getSiguiente();
+        }
+        
+    }*/
 };
 #endif
