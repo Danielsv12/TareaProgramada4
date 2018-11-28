@@ -1,9 +1,7 @@
+#include "neurona.h"
 #include "conexion.h"
-#include <QTime>
 
-Conexion::Conexion(Neurona *n){
-
-       nr = n;
-       peso = qrand();
-       peso/=RAND_MAX;
-    }
+void Neurona::  AgregarConexion(Neurona *r){
+Conexion *c1 = new Conexion(r);
+   conexiones ->Insertar(c1);
+}
