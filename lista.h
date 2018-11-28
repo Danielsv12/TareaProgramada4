@@ -11,7 +11,7 @@ public:
     void Insertar(T dato) {
         
         
-        NodoLista<T>n = new NodoLista<T>(dato) ;
+        NodoLista<T>*n = new NodoLista<T>(dato) ;
         NodoLista<T>*t = cabeza ;
         NodoLista<T>* aux = cabeza;
         if(t==nullptr){
@@ -20,7 +20,7 @@ public:
         while(t!= nullptr){
         t = t-> getSiguiente();
         if(t != nullptr){
-         aux = aux->getSiguiente;
+         aux = aux->getSiguiente();
         }
             aux->setSiguiente(n);
         
