@@ -27,10 +27,16 @@ void RedNeuronal::Entrenar(int cantidadCapas,int numerodeNeuronas){
         for(int j = 0; j<numerodeNeuronas;j++){
             for(int k = 0; k < numerodeNeuronas; k++){
                float aux = 0;
-                aux = (capas ->getI(i)->GetNeuronas().getI(j)->GetCarga() + capas->getI(i+1)->GetNeuronas().getI(k)->GetCarga())
-                        * capas->getI(i)->GetNeuronas().getI(j)->GetConexiones().getI(k)->GetPeso();
-                capas->getI(i+1)->GetNeuronas().getI(k)->SetCarga(aux);
+               if(capas ->getI(i)->GetNeuronas().getI(j)->GetCarga() > capas->getI(i+1)->GetNeuronas().getI(k)->GetUmbral()
+                       ){                 
+                aux = (capas ->getI(i)->GetNeuronas().getI(j)->GetCarga() * capas->getI(i+1)->GetNeuronas().getI(k)->GetCarga())
+                        + capas->getI(i)->GetNeuronas().getI(j)->GetConexiones().getI(k)->GetPeso();
+                capas->getI(i+1)->GetNeuronas().getI(k)->SetCarga(aux);}else{}
             }
         }
      }
    }
+
+
+
+}
