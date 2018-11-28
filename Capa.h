@@ -1,13 +1,26 @@
 #ifndef CAPA_H
 #define CAPA_H
-#include "Lista.h"
-#include "Neurona.h"
+
+#include "lista.h"
+#include "neurona.h"
+
+class Capa {
 
 Lista <Neurona*> *neuronas;
+public:
 
-	void AgregarNeurona(Neurona n) ;
-        Capa(int neuronas);
+Capa(int neuronas);
+//void AgregarNeurona(Neurona n);
+
+
+void CambioDeCarga(float carga, int x);
+
+ Lista <Neurona*> GetNeuronas(){
+    return *neuronas;
+
+}
 
 
 
+};
 #endif
