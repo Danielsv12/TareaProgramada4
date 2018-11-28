@@ -1,40 +1,46 @@
+#pragma once
 #ifndef NEURONA_H
 #define NEURONA_H
-#include "Lista.h"
-#include "Conexion.h"
+#include "conexion.h"
+#include "lista.h"
+#include <QTime>
+class Conexion;
 class Neurona{
-
-float umbral;
-float carga;
-  Lista<Conexiones>;
-  Neurona * siguiente;
-  
 public:
-   {
-Neurona( float u , float c){}     
-        umbral= u ;
-        carga = c;
-        siguiente= nullptr;
-    }
 
-  float getCarga(){return carga;}
-   void setCarga(float c1){carga=c1;}
-  float getUmbral(){return umbral;}
-  void  setUmbral(float u1){umbral= u1;}
+
+float umbral = qrand();
+float carga = qrand();
+  Lista<Conexion*> *conexiones;
+  Neurona* siguiente;
+
+
+  Neurona (){
+    carga /= RAND_MAX;
+    umbral /= RAND_MAX;
+      siguiente = nullptr;
+  }
+  void SetCarga(float c1){carga=c1;}
+  float GetCarga(){ return carga;}
+  float GetUmbral(){return umbral;}
+  void AgregarConexion(Neurona *r);
   
-  
-  
 
-
-
+  Lista<Conexion*> GetConexiones(){
+     return *conexiones;
 }
 
 
-
-
-
-
-
+};
 
 
 #endif
+
+
+
+
+
+
+
+
+
