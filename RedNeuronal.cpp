@@ -1,5 +1,5 @@
 #include "redneuronal.h"
-
+// constructor crea la red neuronal, el usuario manda la cantidad de capas y el numero de neuronas que tendra cada capa.
 RedNeuronal::RedNeuronal(int cantidadCapas, int numerodeneuronas){
 
     for(int o = 0; o < cantidadCapas; o++){
@@ -8,6 +8,7 @@ RedNeuronal::RedNeuronal(int cantidadCapas, int numerodeneuronas){
         //capas->getI(0)->GetNeuronas().getI(0)->GetConexiones().getI(0);
     }
 }
+//Este metodo conecta cada neurona de cada capa con las neuronas de la capa siguiente.
 void RedNeuronal::AgregarConexiones(int cantidadCapas,int numerodeNeuronas){
 
     for(int i = 0; i<cantidadCapas;i++){
@@ -21,7 +22,7 @@ void RedNeuronal::AgregarConexiones(int cantidadCapas,int numerodeNeuronas){
      }
 }
 
-
+// metodo principal, entrena la red neuronal.
 void RedNeuronal::Entrenar(int cantidadCapas,int numerodeNeuronas, float datoEsperado){
 
     for(int i = 0; i<cantidadCapas;i++){
@@ -51,8 +52,9 @@ void RedNeuronal::Entrenar(int cantidadCapas,int numerodeNeuronas, float datoEsp
 
 
 }
+// cambia los pesos de cada conexion en base al nuevo error.
 void RedNeuronal::Retropropagar( int cantidadCapas,int numerodeNeuronas){
-    
+
     for(int i = 0; i<cantidadCapas;i++){
         if(i==(cantidadCapas-1)){i=cantidadCapas;}else{
         for(int j = 0; j<numerodeNeuronas;j++){
@@ -61,7 +63,7 @@ void RedNeuronal::Retropropagar( int cantidadCapas,int numerodeNeuronas){
                 aux1 = capas ->getI(i)->GetNeuronas().getI(j)->GetConexiones().getI(k)->GetPeso();
                 capas ->getI(i)->GetNeuronas().getI(j)->GetConexiones().getI(k)->SetPeso(aux1*this->getError());
             }
-                
+
 }
 
 }}}
